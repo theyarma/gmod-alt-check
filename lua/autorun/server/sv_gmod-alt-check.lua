@@ -55,5 +55,8 @@ net.Receive("CheckerButtonEvent", function(len, ply)
 
   local recievedData = net.ReadString()
   print(ply:Nick().." clicked the button!")
+  net.Start("ReceivedData")
+  net.WriteString("Server recieved a message from: "..ply:Nick())
+  net.Send(ply)
 
 end)
