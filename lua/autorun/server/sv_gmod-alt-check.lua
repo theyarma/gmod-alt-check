@@ -73,11 +73,11 @@ hook.Add("PlayerInitialSpawn", "PlayerLog", function(ply)
             table.insert(altList, alts.SteamID)
           end
           
-          -- We concat down here to avoid a error with datatypes.
+        -- We concat down here to avoid a error with datatypes.
           local altString = table.concat(altList, ", ")
-          ly:PrintMessage(HUD_PRINTTALK, "[Alt Checker] - Alt Detected: " .. altString)
+          ply:PrintMessage(HUD_PRINTTALK, "[Alt Checker] - Alt Detected: " .. altString)
          else
-        ply:PrintMessage(HUD_PRINTTALK, "[Alt Checker] - No Alts Detected for: " .. targetIP)
+          ply:PrintMessage(HUD_PRINTTALK, "[Alt Checker] - No Alts Detected for: " .. targetIP)
         end
       
       end 
